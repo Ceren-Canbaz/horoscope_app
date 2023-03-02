@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:horoscope_app/route_generator.dart';
 
 import 'horoscope_list.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
-      home: HoroscopeList(),
+      onGenerateRoute: RouteGenerator.routeGenerator,
     );
   }
 }

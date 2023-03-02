@@ -22,9 +22,8 @@ class Horoscopeitem extends StatelessWidget {
         elevation: 4,
         child: ListTile(
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) =>
-                    HoroscopeDetails(selectedHoroscope: horoscope)));
+            Navigator.pushNamed(context, '/horoscopeDetail',
+                arguments: horoscope);
           },
           leading: Image.asset(
             'images/${horoscope.smallPhoto}',
