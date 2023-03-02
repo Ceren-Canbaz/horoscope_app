@@ -21,7 +21,8 @@ class _HoroscopeDetailsState extends State<HoroscopeDetails> {
   @override
   void initState() {
     super.initState();
-    createAppBarColour();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => createAppBarColour());
   }
 
   @override
@@ -65,6 +66,5 @@ class _HoroscopeDetailsState extends State<HoroscopeDetails> {
         AssetImage('images/${widget.selectedHoroscope.bigPhoto}'));
     appBarColor = _generator.dominantColor!.color;
     setState(() {});
-    print(appBarColor);
   }
 }
